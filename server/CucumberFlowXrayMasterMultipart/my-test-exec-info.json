@@ -15,9 +15,5 @@
             "name":"Modules"
             }
         ]
-    },
-    "xrayFields": {
-        "testPlanKey": "CALC-208",
-        "environments": ["firefox"]
     }
 }
