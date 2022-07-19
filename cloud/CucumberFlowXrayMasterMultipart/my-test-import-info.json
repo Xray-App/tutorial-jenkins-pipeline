@@ -1,0 +1,23 @@
+{
+    "fields": {
+        "project": {
+            "key": "EWB"
+        },
+        "summary": "Login validation [Firefox]",
+        "issuetype": {
+            "name": "Test Execution"
+        },
+        "components" : [
+            {
+            "name":"Pets"
+            },
+            {
+            "name":"Modules"
+            }
+        ]
+    },
+    "xrayFields": {
+        "testPlanKey": "EWB-237",
+        "environments": ["firefox"]
+    }
+}

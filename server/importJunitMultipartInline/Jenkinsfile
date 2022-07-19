@@ -1,0 +1,28 @@
+pipeline {
+  agent any
+  stages {
+    stage('Import results to Xray (multipart)') {
+        steps {
+            step([$class: 'XrayImportBuilder', endpointName: '/junit/multipart', importFilePath: 'server/importJunitMultipartInline/*.xml', importToSameExecution: 'true', projectKey: 'CALC', serverInstance: '5b637012-9ba3-4005-afbe-7f11a19df03f', importInParallel: 'true', testImportInfo: 'server/importJunitMultipartInline/my-test-import-info.json', inputTestInfoSwitcher: 'filePath', inputInfoSwitcher: 'fileContent', importInfo: '''{
+            "fields": {
+                "project": {
+                    "key": "CALC"
+                },
+                "summary": "Test Execution for java junit ${BUILD_NUMBER}",
+                "issuetype": {
+                    "name": "Test Execution"
+                },
+                "components" : [
+                    {
+                    "name":"Pets"
+                    },
+                    {
+                    "name":"Modules"
+                    }
+                ]
+            }
+            }'''])
+            }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+pipeline {
+  agent any
+  stages {
+    stage('Export feature files') {
+      steps{
+          step([$class: 'XrayExportBuilder', issues: 'EWB-284', serverInstance: '3bd01273-d481-46d1-8826-b862eff38bcb'])
+      }
+    }
+    stage('Run tests') {
+      steps {
+        echo 'Testing..'
+      }
+    }
+    stage('Import results to Xray') {
+      steps {
+        step([$class: 'XrayImportBuilder', endpointName: '/cucumber', importFilePath: 'cloud/CucumberFlowXrayMasterUpdateTestExec/login-feature.json', importToSameExecution: 'true', projectKey: 'EWB', testExecKey: 'EWB-293', fixVersion: '1.2', revision: 'commit eee455', serverInstance: '3bd01273-d481-46d1-8826-b862eff38bcb'])
+      }
+    }
+  }
+}

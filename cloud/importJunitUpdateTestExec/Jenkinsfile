@@ -1,0 +1,10 @@
+pipeline {
+  agent any
+  stages {
+    stage('Import results to Xray') {
+      steps {
+        step([$class: 'XrayImportBuilder', endpointName: '/junit', importFilePath: 'cloud/importJunitUpdateTestExec/xray-report.xml', importToSameExecution: 'true', projectKey: 'EWB', testExecKey: 'EWB-278', fixVersion: '1.2', revision: 'commit eee455', serverInstance: '3bd01273-d481-46d1-8826-b862eff38bcb'])
+      }
+    }
+  }
+}

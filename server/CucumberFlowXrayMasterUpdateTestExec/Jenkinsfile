@@ -1,0 +1,20 @@
+pipeline {
+  agent any
+  stages {
+    stage('Export feature files') {
+      steps{
+          step([$class: 'XrayExportBuilder', issues: 'CALC-207', serverInstance: '5b637012-9ba3-4005-afbe-7f11a19df03f'])
+      }
+    }
+    stage('Run tests') {
+      steps {
+        echo 'Testing..'
+      }
+    }
+    stage('Import results to Xray') {
+      steps {
+        step([$class: 'XrayImportBuilder', endpointName: '/cucumber', importFilePath: 'server/CucumberFlowXrayMasterUpdateTestExec/login-feature.json', importToSameExecution: 'true', projectKey: 'CALC', testExecKey: 'CALC-211', fixVersion: '1.2', revision: 'commit eee455', serverInstance: '5b637012-9ba3-4005-afbe-7f11a19df03f'])
+      }
+    }
+  }
+}

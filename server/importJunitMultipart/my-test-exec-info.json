@@ -1,0 +1,19 @@
+{
+    "fields": {
+        "project": {
+            "key": "CALC"
+        },
+        "summary": "Login validation [Firefox]",
+        "issuetype": {
+            "name": "Test Execution"
+        },
+        "components" : [
+            {
+            "name":"Pets"
+            },
+            {
+            "name":"Modules"
+            }
+        ]
+    }
+}

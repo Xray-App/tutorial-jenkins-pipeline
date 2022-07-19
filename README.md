@@ -7,7 +7,7 @@ Here you can find the examples that showcase how to import test results using th
 
 This code is divided into two directories with multiple examples that supports two tutorials:
 - [./cloud](cloud) - If you are using the cloud version of Xray; detailed info in [Examples using Jenkins pipeline](https://docs.getxray.app/display/XRAYCLOUD/Jenkins+pipeline+integration) 
-- [./server](server) - If you are using the Server/DC version of Xray; detailed info in [Examples using JEnkins pipeline](https://docs.getxray.app/display/XRAY/Examples+using+Test+Case+Importer)
+- [./server](server) - If you are using the Server/DC version of Xray; detailed info in [Examples using Jenkins pipeline](https://docs.getxray.app/display/XRAY/Jenkins+pipeline+integration)
 
 
 ## Prerequisites
