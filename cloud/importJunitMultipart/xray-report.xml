@@ -2,7 +2,7 @@
 <testsuite name="login.spec.js" timestamp="1657202284373" hostname="" tests="2" failures="0" skipped="0" time="2.459" errors="0">
 <testcase name="Login validations Login with valid credentials" classname="[chromium] › login.spec.js:6:5 › Login validations › Login with valid credentials" time="1.421">
 <properties>
-<property name="test_key" value="EWB-271">
+<property name="test_key" value="EWB-241">
 </property>
 <property name="test_summary" value="Successful login.">
 </property>
