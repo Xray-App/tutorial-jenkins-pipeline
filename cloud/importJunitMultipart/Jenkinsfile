@@ -1,6 +1,9 @@
 pipeline {
   agent any
   stages {
+    environment {
+      PRODUCT_NAME = "MyProductName"
+    }
     stage('Import results to Xray (multipart)') {
         steps {
             step([$class: 'XrayImportBuilder', endpointName: '/junit/multipart', importFilePath: 'cloud/importJunitMultipart/*.xml', importToSameExecution: 'true', projectKey: 'EWB', serverInstance: '3bd01273-d481-46d1-8826-b862eff38bcb', importInParallel: 'true', importInfo: 'cloud/importJunitMultipart/my-test-exec-info.json', testImportInfo: 'cloud/importJunitMultipart/my-test-import-info.json', inputInfoSwitcher: 'filePath', inputTestInfoSwitcher: 'filePath' ])
