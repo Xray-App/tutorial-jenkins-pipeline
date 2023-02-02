@@ -3,7 +3,7 @@
         "project": {
             "key": "EWB"
         },
-        "summary": "Login validation [Firefox] - ${env.PRODUCT_NAME}",
+        "summary": "Login validation [Firefox]",
         "issuetype": {
             "name": "Test Execution"
         },
